@@ -21,17 +21,17 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = "Sakuya";
 
-			config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue };
+			config.Colors = [ManaColor.White, ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 1, White = 1, Blue = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(DropToKnife), nameof(Knife) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(DropToKnife) + "+", nameof(Knife) };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(DropToKnife), nameof(Knife)];
+			config.UpgradedRelativeCards = [nameof(DropToKnife) + "+", nameof(Knife)];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

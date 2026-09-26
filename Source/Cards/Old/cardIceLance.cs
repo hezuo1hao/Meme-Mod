@@ -36,7 +36,7 @@ namespace lvalonmeme.Cards
 			config.GunName = "冰枪术";
 			config.GunNameBurst = "冰枪术B";
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Blue = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1 };
 			config.Rarity = Rarity.Common;
@@ -46,10 +46,10 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Accuracy;
 			config.UpgradedKeywords = Keyword.Accuracy;
 
-			config.RelativeCards = new List<string>() { nameof(IceLance) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(IceLance) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Cold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Cold) };
+			config.RelativeCards = [nameof(IceLance)];
+			config.UpgradedRelativeCards = [nameof(IceLance) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(Cold)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Cold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

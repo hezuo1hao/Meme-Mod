@@ -23,7 +23,7 @@ namespace lvalonmeme.Cards
 			config.Value1 = 1;
 			config.Mana = new ManaGroup() { Philosophy = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green };
+			config.Colors = [ManaColor.Green];
 			config.Cost = new ManaGroup { Green = 2 };
 			config.UpgradedCost = new ManaGroup { Any = 0 };
 			config.Rarity = Rarity.Uncommon;
@@ -33,10 +33,10 @@ namespace lvalonmeme.Cards
 			config.RelativeKeyword = Keyword.FriendCard;
 			config.UpgradedRelativeKeyword = Keyword.FriendCard;
 
-			config.RelativeCards = new List<string>() { nameof(FairyTree) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(FairyTree) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(FairyTree)];
+			config.UpgradedRelativeCards = [nameof(FairyTree) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

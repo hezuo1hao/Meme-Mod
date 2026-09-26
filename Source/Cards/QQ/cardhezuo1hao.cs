@@ -37,7 +37,7 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = null;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Colorless };
+			config.Colors = [ManaColor.Colorless];
             config.Cost = new ManaGroup { Any = 0 };
             config.Rarity = Rarity.Rare;
             config.Mana = new ManaGroup { Philosophy = 1 };
@@ -46,9 +46,9 @@ namespace lvalonmeme.Cards
 
             config.Keywords = Keyword.Exile | Keyword.Retain | Keyword.Initial;
             config.UpgradedKeywords = Keyword.Exile | Keyword.Retain | Keyword.Initial | Keyword.Replenish | Keyword.Plentiful;
-            config.RelativeCards = config.UpgradedRelativeCards = new List<string>() { nameof(ToolBlock), nameof(ToolAmulet), nameof(ToolFirstAid) };
-            config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe), nameof(semodifier) };
+            config.RelativeCards = config.UpgradedRelativeCards = [nameof(ToolBlock), nameof(ToolAmulet), nameof(ToolFirstAid)];
+            config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe), nameof(semodifier)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -249,15 +249,15 @@ namespace lvalonmeme.Cards
             if (!__instance.Packs.Contains("packmeme"))
                 return;
 
-            HashSet<Type> addedTypes = new HashSet<Type>();
-            List<Card> materials = new List<Card>();
+            HashSet<Type> addedTypes = [];
+            List<Card> materials = [];
 
             foreach (Card card in __instance.BaseDeck)
             {
                 Type cardType = card.GetType();
 
                 // 检查是否为目标类型且未添加过
-                if ((card is ToolBlock || card is ToolAmulet || card is ToolFirstAid)
+                if ((card is ToolBlock or ToolAmulet or ToolFirstAid)
                     && addedTypes.Add(cardType))  // Add 返回 false 表示已存在
                 {
                     materials.Add(card);

@@ -29,18 +29,18 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = "Cirno";
 
-			config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Green };
+			config.Colors = [ManaColor.White, ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 1, White = 1, Green = 3 };
 			config.UpgradedCost = new ManaGroup { Any = 1, Hybrid = 2, HybridColor = 3 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Skill;
 			config.UpgradedKeywords = Keyword.Replenish;
-			config.RelativeCards = new List<string>() { nameof(LilyFriend), nameof(LunaFriend), nameof(LarvaFriend) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(LilyFriend) + "+", nameof(LunaFriend) + "+", nameof(LarvaFriend) };
+			config.RelativeCards = [nameof(LilyFriend), nameof(LunaFriend), nameof(LarvaFriend)];
+			config.UpgradedRelativeCards = [nameof(LilyFriend) + "+", nameof(LunaFriend) + "+", nameof(LarvaFriend)];
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -58,12 +58,12 @@ namespace lvalonmeme.Cards
 	{
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
-			List<Card> cards = new List<Card>{
+			List<Card> cards = [
 				Library.CreateCard<LunaFriend>(),
 				Library.CreateCard<LilyFriend>(),
 				Library.CreateCard<LarvaFriend>()
-			};
-			List<Card> cards2 = new List<Card>();
+			];
+			List<Card> cards2 = [];
 			foreach (Card card in cards)
 			{
 				if (IsUpgraded && card.Id != nameof(LarvaFriend))

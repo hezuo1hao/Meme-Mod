@@ -112,7 +112,7 @@ namespace VanillaTweaks
 				yield return BuffAction<ColdHeartedSe>(0, 0, 0, 0, 0.2f);
 				if (GameMaster.Instance.CurrentGameRun.Packs.Contains(nameof(lvalonmeme.Packs.packoldDef)[..^3]))
 				{
-					List<Card> list = new List<Card>();
+					List<Card> list = [];
 					for (int i = 0; i < Value1; i++)
 					{
 						list.Add(Library.CreateCard(nameof(cardIceLance)));

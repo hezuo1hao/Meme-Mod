@@ -28,17 +28,17 @@ namespace lvalonmeme.Cards
 
 			config.Mana = new ManaGroup { Any = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green };
+			config.Colors = [ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 2, Green = 2 };
 			config.UpgradedCost = new ManaGroup { Any = 1, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(NewsNegative) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(NewsNegative) };
-			config.RelativeEffects = new List<string>() { nameof(sesanaeseduction), nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sesanaeseduction), nameof(sememe) };
+			config.RelativeCards = [nameof(NewsNegative)];
+			config.UpgradedRelativeCards = [nameof(NewsNegative)];
+			config.RelativeEffects = [nameof(sesanaeseduction), nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sesanaeseduction), nameof(sememe)];
 			config.RelativeKeyword = Keyword.TempMorph;
 			config.UpgradedRelativeKeyword = Keyword.TempMorph;
 

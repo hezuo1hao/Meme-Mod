@@ -27,7 +27,7 @@ namespace lvalonmeme.Cards
 			config.Value1 = 4;
 			config.UpgradedValue1 = 6;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { White = 1 };
 			config.Rarity = Rarity.Uncommon;
 
@@ -36,10 +36,10 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Retain;
 			config.UpgradedKeywords = Keyword.Retain;
 
-			config.RelativeCards = new List<string>() { nameof(Changzhizhen) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(Changzhizhen) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(Changzhizhen)];
+			config.UpgradedRelativeCards = [nameof(Changzhizhen) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

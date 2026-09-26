@@ -24,15 +24,15 @@ namespace lvalonmeme.Cards
 			config.Value1 = 15;
 			config.Value2 = 5;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green, ManaColor.White };
+			config.Colors = [ManaColor.Green, ManaColor.White];
 			config.Cost = new ManaGroup { Any = 2, Green = 1, White = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1, Hybrid = 1, HybridColor = 3 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

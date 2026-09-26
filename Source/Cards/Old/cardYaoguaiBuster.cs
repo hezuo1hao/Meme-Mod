@@ -30,16 +30,16 @@ namespace lvalonmeme.Cards
 			config.Value2 = 2;
 			config.UpgradedValue2 = 3;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Red };
+			config.Colors = [ManaColor.Red];
 			config.Cost = new ManaGroup { Red = 2 };
 			config.Rarity = Rarity.Common;
 
 			config.Type = CardType.Attack;
 
-			config.RelativeCards = new List<string>() { nameof(YaoguaiBuster) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(YaoguaiBuster) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Weak) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Weak) };
+			config.RelativeCards = [nameof(YaoguaiBuster)];
+			config.UpgradedRelativeCards = [nameof(YaoguaiBuster) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(Weak)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Weak)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

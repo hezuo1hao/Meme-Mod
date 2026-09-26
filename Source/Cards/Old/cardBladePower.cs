@@ -28,16 +28,16 @@ namespace lvalonmeme.Cards
 			config.UpgradedValue1 = 3;
 			config.Value2 = 1;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { White = 1 };
 			config.Rarity = Rarity.Uncommon;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(BladePower) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(BladePower) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Firepower) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Firepower) };
+			config.RelativeCards = [nameof(BladePower)];
+			config.UpgradedRelativeCards = [nameof(BladePower) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(Firepower)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Firepower)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

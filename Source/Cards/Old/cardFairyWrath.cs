@@ -34,7 +34,7 @@ namespace lvalonmeme.Cards
 			config.GunName = "自然之怒";
 			config.GunNameBurst = "自然之怒B";
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green };
+			config.Colors = [ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 1, Green = 1 };
 			config.Rarity = Rarity.Uncommon;
 
@@ -43,10 +43,10 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Accuracy;
 			config.UpgradedKeywords = Keyword.Accuracy;
 
-			config.RelativeCards = new List<string>() { nameof(FairyWrath), nameof(SummerFlower), nameof(DayaojingFriend) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(FairyWrath) + "+", nameof(SummerFlower) + "+", nameof(DayaojingFriend) };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(FairyWrath), nameof(SummerFlower), nameof(DayaojingFriend)];
+			config.UpgradedRelativeCards = [nameof(FairyWrath) + "+", nameof(SummerFlower) + "+", nameof(DayaojingFriend)];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

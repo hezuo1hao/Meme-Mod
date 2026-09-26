@@ -30,17 +30,17 @@ namespace lvalonmeme.Cards
 			config.GunName = "冰尖之舞";
 			config.GunNameBurst = "冰尖之舞B";
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 1, Blue = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1, Blue = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Attack;
 
-			config.RelativeCards = new List<string>() { nameof(DeepFreeze) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(DeepFreeze) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Cold), nameof(seDeepFreeze) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Cold), nameof(seDeepFreeze) };
+			config.RelativeCards = [nameof(DeepFreeze)];
+			config.UpgradedRelativeCards = [nameof(DeepFreeze) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(Cold), nameof(seDeepFreeze)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Cold), nameof(seDeepFreeze)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

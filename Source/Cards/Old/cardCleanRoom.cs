@@ -28,17 +28,17 @@ namespace lvalonmeme.Cards
 			config.Value2 = 1;
 			config.UpgradedValue2 = 2;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { White = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1 };
 			config.Rarity = Rarity.Uncommon;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(CleanRoom) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(CleanRoom) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(CleanRoom)];
+			config.UpgradedRelativeCards = [nameof(CleanRoom) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

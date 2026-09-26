@@ -29,7 +29,7 @@ namespace lvalonmeme.Cards
 			config.UpgradedValue1 = 5;
 			config.Mana = new ManaGroup { Any = 0 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Green };
+			config.Colors = [ManaColor.Blue, ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 3 };
 			config.Rarity = Rarity.Rare;
 
@@ -39,8 +39,8 @@ namespace lvalonmeme.Cards
 			config.UpgradedKeywords = Keyword.Ethereal;
 			config.RelativeKeyword = Keyword.TempMorph | Keyword.Ethereal;
 			config.UpgradedRelativeKeyword = Keyword.TempMorph;
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

@@ -33,7 +33,7 @@ namespace lvalonmeme.Cards
 			config.Block = 20;
 			config.UpgradedBlock = 24;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green };
+			config.Colors = [ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 2, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
@@ -41,10 +41,10 @@ namespace lvalonmeme.Cards
 
 			config.UpgradedKeywords = Keyword.Retain;
 
-			config.RelativeCards = new List<string>() { nameof(LarvaDefense), nameof(LarvaFriend) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(LarvaDefense) + "+", nameof(LarvaFriend) };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Weak), nameof(Vulnerable) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Weak), nameof(Vulnerable) };
+			config.RelativeCards = [nameof(LarvaDefense), nameof(LarvaFriend)];
+			config.UpgradedRelativeCards = [nameof(LarvaDefense) + "+", nameof(LarvaFriend)];
+			config.RelativeEffects = [nameof(seold), nameof(Weak), nameof(Vulnerable)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Weak), nameof(Vulnerable)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

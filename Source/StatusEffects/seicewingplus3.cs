@@ -17,7 +17,7 @@ namespace lvalonmeme.StatusEffects
 		{
 			StatusEffectConfig config = GetDefaultStatusEffectConfig();
 			config.Type = StatusEffectType.Positive;
-			config.RelativeEffects = new List<string>() { nameof(Cold) };
+			config.RelativeEffects = [nameof(Cold)];
 			return config;
 		}
 	}

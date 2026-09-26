@@ -11,7 +11,7 @@ namespace lvalonmeme.Cards.Template
 	{
 		private static readonly List<ManaColor> offColors = BepinexPlugin.offColors;
 		private static int? initial_offset = null;
-		private static HashSet<int> uniqueIds = new HashSet<int>() { };
+		private static HashSet<int> uniqueIds = [];
 
 		public const int milx1 = (int)1E7;
 
@@ -20,7 +20,7 @@ namespace lvalonmeme.Cards.Template
 			get
 			{
 				if (uniqueIds == null)
-					uniqueIds = new HashSet<int>();
+					uniqueIds = [];
 				return uniqueIds;
 
 			}

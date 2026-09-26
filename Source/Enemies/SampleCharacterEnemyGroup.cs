@@ -16,7 +16,7 @@ namespace lvalonmeme.Enemies
             EnemyGroupConfig config = GetEnemyGroupDefaultConfig();
             config.Name = nameof(lvalonmeme);
             config.FormationName = VanillaFormations.Single;
-            config.Enemies = new List<string>() { nameof(lvalonmeme) };
+            config.Enemies = [nameof(lvalonmeme)];
             config.EnemyType = EnemyType.Boss;
             config.RollBossExhibit = true;
 

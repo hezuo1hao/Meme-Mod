@@ -33,7 +33,7 @@ namespace lvalonmeme.Cards
 			config.Value2 = 3; // threshold
 			config.Mana = new ManaGroup() { Colorless = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 0 };
 			config.Rarity = Rarity.Common;
 
@@ -42,11 +42,11 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Retain | Keyword.Exile;
 			config.UpgradedKeywords = Keyword.Retain | Keyword.Exile | Keyword.Replenish;
 
-			config.RelativeEffects = new List<string>() { nameof(Cold), nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(Cold), nameof(sememe) };
+			config.RelativeEffects = [nameof(Cold), nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(Cold), nameof(sememe)];
 
-			config.RelativeCards = new List<string>() { nameof(IceWing), nameof(cardiwoption1), nameof(cardiwoption2), nameof(cardiwoption3) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(IceWing), nameof(cardiwoption1), nameof(cardiwoption2), nameof(cardiwoption3) };
+			config.RelativeCards = [nameof(IceWing), nameof(cardiwoption1), nameof(cardiwoption2), nameof(cardiwoption3)];
+			config.UpgradedRelativeCards = [nameof(IceWing), nameof(cardiwoption1), nameof(cardiwoption2), nameof(cardiwoption3)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -67,12 +67,12 @@ namespace lvalonmeme.Cards
 		{
 			if (growcount == Value6 - 1)
 			{
-				List<Card> list = new List<Card>()
-				{
-					Library.CreateCard<cardiwoption1>(),
+				List<Card> list =
+                [
+                    Library.CreateCard<cardiwoption1>(),
 					Library.CreateCard<cardiwoption2>(),
 					Library.CreateCard<cardiwoption3>()
-				};
+				];
 
 				SelectCardInteraction interaction = new SelectCardInteraction(1, 1, list)
 				{

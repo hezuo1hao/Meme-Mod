@@ -25,7 +25,7 @@ namespace lvalonmeme.Cards
 			config.UpgradedValue1 = 2;
 			config.Mana = new ManaGroup() { Any = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Black, ManaColor.Green };
+			config.Colors = [ManaColor.Blue, ManaColor.Black, ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 2, Blue = 1, Black = 1, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
@@ -33,10 +33,10 @@ namespace lvalonmeme.Cards
 
 			config.RelativeKeyword = Keyword.NaturalTurn;
 			config.UpgradedRelativeKeyword = Keyword.NaturalTurn;
-			config.RelativeCards = new List<string>() { nameof(JinziDoppelganger) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(JinziDoppelganger) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(JinziDoppelganger)];
+			config.UpgradedRelativeCards = [nameof(JinziDoppelganger) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

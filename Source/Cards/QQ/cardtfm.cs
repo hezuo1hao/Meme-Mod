@@ -35,7 +35,7 @@ namespace lvalonmeme.Cards
 			config.Shield = 99;
 			config.UpgradedShield = 999;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Black };
+			config.Colors = [ManaColor.Black];
 			config.Cost = new ManaGroup { Any = 2, Black = 3 };
 
 			config.Mana = new ManaGroup() { Any = 1 };
@@ -44,10 +44,10 @@ namespace lvalonmeme.Cards
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(TrueMoon), nameof(WizardStudy) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(TrueMoon), nameof(WizardStudy) };
-			config.RelativeEffects = new List<string>() { nameof(ManaFreezed), nameof(Amulet), nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(ManaFreezed), nameof(Amulet), nameof(sememe) };
+			config.RelativeCards = [nameof(TrueMoon), nameof(WizardStudy)];
+			config.UpgradedRelativeCards = [nameof(TrueMoon), nameof(WizardStudy)];
+			config.RelativeEffects = [nameof(ManaFreezed), nameof(Amulet), nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(ManaFreezed), nameof(Amulet), nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

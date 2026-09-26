@@ -21,7 +21,7 @@ namespace lvalonmeme.StatusEffects
 			StatusEffectConfig config = GetDefaultStatusEffectConfig();
 			config.IsStackable = false;
 			config.HasCount = true;
-			config.RelativeEffects = new List<string>() { nameof(Grace), nameof(TempFirepower), nameof(TempSpirit) };
+			config.RelativeEffects = [nameof(Grace), nameof(TempFirepower), nameof(TempSpirit)];
 			return config;
 		}
 	}
@@ -29,11 +29,11 @@ namespace lvalonmeme.StatusEffects
 	[EntityLogic(typeof(searashidadDef))]
 	public sealed class searashidad : StatusEffect
 	{
-		List<Card> thecards = new List<Card>();
+		List<Card> thecards = [];
 		protected override void OnAdded(Unit unit)
 		{
 			Count = 0;
-			thecards = new List<Card>();
+			thecards = [];
 			HandleOwnerEvent(Battle.CardsAddingToHand, OnAddCard1);
 			HandleOwnerEvent(Battle.CardsAddingToDrawZone, OnAddCard2);
 			ReactOwnerEvent(Battle.CardUsed, OnCardUsed);

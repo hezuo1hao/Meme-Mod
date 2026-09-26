@@ -27,7 +27,7 @@ namespace lvalonmeme.Cards
 			config.Value1 = 1;
 			config.UpgradedValue1 = 2;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Blue = 2 };
 			config.Rarity = Rarity.Uncommon;
 
@@ -36,10 +36,10 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Exile;
 			config.UpgradedKeywords = Keyword.Exile;
 
-			config.RelativeCards = new List<string>() { nameof(DoremyDuplicate) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(DoremyDuplicate) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(DoremyDuplicate)];
+			config.UpgradedRelativeCards = [nameof(DoremyDuplicate) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 
@@ -69,7 +69,7 @@ namespace lvalonmeme.Cards
 			if (precondition != null)
 			{
 				Card card = ((SelectHandInteraction)precondition).SelectedCards[0];
-				List<Card> list = new List<Card>();
+				List<Card> list = [];
 				for (int i = 0; i < Value1; i++)
 				{
 					list.Add(card.CloneBattleCard());

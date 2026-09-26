@@ -196,9 +196,9 @@ namespace lvalonmeme
 				{
 					if (BepinexPlugin.oldcard.Value)
 					{
-						List<Card> card = new List<Card>{
+						List<Card> card = [
 						Library.CreateCard<cardold>()
-					};
+					];
 						string[] arr2 = toolbox.banlistgetter();
 						bool inban = false;
 						foreach (string s in arr2)
@@ -266,7 +266,7 @@ namespace lvalonmeme
 			unit.ReactBattleEvent(gamerun.Battle.CardUsed, args => CardUsed(args));
 			IEnumerable<BattleAction> battlefieldyeet(CardsEventArgs args)
 			{
-				List<BattleAction> list = new List<BattleAction>();
+				List<BattleAction> list = [];
 				if (gamerun.Packs.Contains(nameof(Packs.packoldDef)[..^3]))
 				{
 					string[] source = toolbox.banlistgetter();
@@ -277,7 +277,7 @@ namespace lvalonmeme
 						string text = "card" + item.Id;
 						if (!value || !source.Contains(text.ToLowerInvariant()))
 						{
-							List<Card> list2 = new List<Card> { Library.TryCreateCard(text, item.IsUpgraded, item.UpgradeCounter) };
+							List<Card> list2 = [Library.TryCreateCard(text, item.IsUpgraded, item.UpgradeCounter)];
 							Card val = Library.TryCreateCard(text, item.IsUpgraded, item.UpgradeCounter);
 							CardZone zone = item.Zone;
 							CardZone val2 = zone;
@@ -312,7 +312,7 @@ namespace lvalonmeme
 			}
 			IEnumerable<BattleAction> battlefieldyeet2(CardsAddingToDrawZoneEventArgs args)
 			{
-				List<BattleAction> list = new List<BattleAction>();
+				List<BattleAction> list = [];
 				if (gamerun.Packs.Contains(nameof(Packs.packoldDef)[..^3]))
 				{
 					string[] source = toolbox.banlistgetter();
@@ -323,7 +323,7 @@ namespace lvalonmeme
 						string text = "card" + item3.Id;
 						if (!value || !source.Contains(text.ToLowerInvariant()))
 						{
-							List<Card> list2 = new List<Card> { Library.TryCreateCard(text, item3.IsUpgraded, item3.UpgradeCounter) };
+							List<Card> list2 = [Library.TryCreateCard(text, item3.IsUpgraded, item3.UpgradeCounter)];
 							Card val = Library.TryCreateCard(text, item3.IsUpgraded, item3.UpgradeCounter);
 							if ((int)item3.Zone == 1)
 							{
@@ -352,7 +352,7 @@ namespace lvalonmeme
 				{
 					youmiplayed = true;
 				}
-				return new List<BattleAction>();
+				return [];
 			}
 		}
 	}

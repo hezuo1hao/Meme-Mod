@@ -24,16 +24,16 @@ namespace lvalonmeme.Cards
 			config.Mana = new ManaGroup { Philosophy = 3 };
 			config.Keywords = Keyword.Exile;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { White = 2 };
 			config.Rarity = Rarity.Uncommon;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(SakuyaSleep) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(SakuyaSleep) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(SakuyaSleep)];
+			config.UpgradedRelativeCards = [nameof(SakuyaSleep) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

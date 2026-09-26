@@ -53,10 +53,10 @@ namespace lvalonmeme.StatusEffects
             card2.SetTurnCost(Mana);
             card2.IsExile = true;
             card2.IsEthereal = true;
-            List<Card> cards = new List<Card>
-            {
+            List<Card> cards =
+            [
                 card2
-            };
+            ];
             yield return new AddCardsToHandAction(cards, AddCardsType.Normal);
             if (Count > 0) {
                 Count--;

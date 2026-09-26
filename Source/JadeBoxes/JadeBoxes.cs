@@ -531,8 +531,8 @@ namespace lvalonmeme.JadeBoxes
 			public sealed class JadeBoxDouble : JadeBox
 			{
 				// bool enlarged = false;
-				List<Unit> blacklist = new List<Unit>();
-				private readonly List<(Card, CardUsingEventArgs)> AttackEchoArgs = new List<(Card, CardUsingEventArgs)>();
+				List<Unit> blacklist = [];
+				private readonly List<(Card, CardUsingEventArgs)> AttackEchoArgs = [];
 				protected override void OnEnterBattle()
 				{
 					ReactBattleEvent(Battle.Player.TurnStarted, OnTurnStarted);
@@ -738,29 +738,29 @@ namespace lvalonmeme.JadeBoxes
 				HashSet<Card> toremovecard;
 				HashSet<StatusEffect> toremovese;
 				HashSet<Exhibit> toremoveexhibit;
-				List<string> SEmana = new List<string>()
-				{
-					nameof(MoodPeace),
+				List<string> SEmana =
+                [
+                    nameof(MoodPeace),
 					nameof(MoodEpiphany),
 					nameof(Burst)
-				};
-				List<string> cardblacklist = new List<string>()
-				{
-					nameof(Potion)
-				};
-				List<string> shiningmanablacklist = new List<string>()
-				{
-					nameof(HuiyeBaoxiang),
+				];
+				List<string> cardblacklist =
+                [
+                    nameof(Potion)
+				];
+				List<string> shiningmanablacklist =
+                [
+                    nameof(HuiyeBaoxiang),
 					nameof(QipaiYouhua),
 					nameof(YizangnuoWuzhi),
 					nameof(QicaiLianhua),
 					nameof(HuashanBaiyaosheng),
-				};
+				];
 				protected override void OnEnterBattle()
 				{
-					toremovecard = new HashSet<Card>();
-					toremovese = new HashSet<StatusEffect>();
-					toremoveexhibit = new HashSet<Exhibit>();
+					toremovecard = [];
+					toremovese = [];
+					toremoveexhibit = [];
 					HandleBattleEvent(Battle.ManaGaining, OnManaGaining);
 					ReactBattleEvent(Battle.ManaGained, OnManaGained);
 					HandleBattleEvent(Battle.Predraw, OnPredraw);

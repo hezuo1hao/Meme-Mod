@@ -23,17 +23,17 @@ namespace lvalonmeme.Cards
 
 			config.Value1 = 3;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 3, Blue = 2 };
 			config.UpgradedCost = new ManaGroup { Any = 2, Blue = 2 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(IceMatrix) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(IceMatrix) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(Cold), nameof(FrostArmor) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(Cold), nameof(FrostArmor) };
+			config.RelativeCards = [nameof(IceMatrix)];
+			config.UpgradedRelativeCards = [nameof(IceMatrix) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(Cold), nameof(FrostArmor)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(Cold), nameof(FrostArmor)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

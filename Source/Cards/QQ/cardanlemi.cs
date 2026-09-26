@@ -24,7 +24,7 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = null;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Red };
+			config.Colors = [ManaColor.Red];
 			config.Cost = new ManaGroup { Red = 3 };
 			config.UpgradedCost = new ManaGroup { Red = 1 };
 			config.Rarity = Rarity.Rare;
@@ -33,8 +33,8 @@ namespace lvalonmeme.Cards
 
 			config.Type = CardType.Skill;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

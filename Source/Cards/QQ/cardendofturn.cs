@@ -30,7 +30,7 @@ namespace lvalonmeme.Cards
 
 			config.Value1 = 1;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue, ManaColor.Black };
+			config.Colors = [ManaColor.White, ManaColor.Blue, ManaColor.Black];
 			config.Cost = new ManaGroup { Any = 0 };
 			config.Rarity = Rarity.Rare;
 
@@ -40,7 +40,7 @@ namespace lvalonmeme.Cards
 
 			config.Keywords = Keyword.Forbidden;
 
-			config.RelativeCards = new List<string>() { nameof(HuiyeSuperExtraTurn) };
+			config.RelativeCards = [nameof(HuiyeSuperExtraTurn)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

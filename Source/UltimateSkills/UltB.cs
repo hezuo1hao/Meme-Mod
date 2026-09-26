@@ -21,7 +21,7 @@ namespace lvalonmeme.SampleCharacterUlt
             config.Value1 = 2;
 
             // Add the relative status effects in the description box.   
-            config.RelativeEffects = new List<string>() { nameof(Weak) };
+            config.RelativeEffects = [nameof(Weak)];
             return config;
         }
     }

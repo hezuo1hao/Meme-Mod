@@ -26,16 +26,16 @@ namespace lvalonmeme.Cards
 			config.Value1 = 3;
 			config.Mana = new ManaGroup() { Any = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { Any = 2, White = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(WhiteWorld) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(WhiteWorld) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(ManaFreezed) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(ManaFreezed) };
+			config.RelativeCards = [nameof(WhiteWorld)];
+			config.UpgradedRelativeCards = [nameof(WhiteWorld) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(ManaFreezed)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(ManaFreezed)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

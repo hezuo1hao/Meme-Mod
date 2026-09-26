@@ -26,17 +26,17 @@ namespace lvalonmeme.Cards
 			config.Value2 = 1;
 			config.UpgradedValue2 = 2;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Red };
+			config.Colors = [ManaColor.White, ManaColor.Red];
 			config.Cost = new ManaGroup { White = 1, Red = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string> { nameof(ShengtianKick), nameof(ShopDefense) };
-			config.UpgradedRelativeCards = new List<string> { nameof(ShengtianKick) + "+", nameof(ShopDefense) + "+" };
+			config.RelativeCards = [nameof(ShengtianKick), nameof(ShopDefense)];
+			config.UpgradedRelativeCards = [nameof(ShengtianKick) + "+", nameof(ShopDefense) + "+"];
 
-			config.RelativeEffects = new List<string> { nameof(secirnolevel), nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string> { nameof(secirnolevel), nameof(sememe) };
+			config.RelativeEffects = [nameof(secirnolevel), nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(secirnolevel), nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

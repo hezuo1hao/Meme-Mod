@@ -28,7 +28,7 @@ namespace lvalonmeme.Cards
 			config.Value1 = 5;
 			config.Value2 = 1;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green };
+			config.Colors = [ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 2, Green = 3 };
 			config.Rarity = Rarity.Rare;
 
@@ -36,10 +36,10 @@ namespace lvalonmeme.Cards
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(LoveLetter) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(LoveLetter) };
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeCards = [nameof(LoveLetter)];
+			config.UpgradedRelativeCards = [nameof(LoveLetter)];
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

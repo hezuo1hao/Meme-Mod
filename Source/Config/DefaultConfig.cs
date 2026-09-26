@@ -61,7 +61,7 @@ namespace lvalonmeme.Config
 			   Rarity: Rarity.Common,
 			   Type: CardType.Unknown,
 			   TargetType: TargetType.Nobody,
-			   Colors: new List<ManaColor>() { },
+			   Colors: [],
 			   IsXCost: false,
 			   Cost: new ManaGroup() { },
 			   UpgradedCost: null,
@@ -102,10 +102,10 @@ namespace lvalonmeme.Config
 			   RelativeKeyword: Keyword.None,
 			   UpgradedRelativeKeyword: Keyword.None,
 
-			   RelativeEffects: new List<string>() { },
-			   UpgradedRelativeEffects: new List<string>() { },
-			   RelativeCards: new List<string>() { },
-			   UpgradedRelativeCards: new List<string>() { },
+			   RelativeEffects: [],
+			   UpgradedRelativeEffects: [],
+			   RelativeCards: [],
+			   UpgradedRelativeCards: [],
 
 			   Owner: OwnerName,
 			   Pack: "",
@@ -115,7 +115,7 @@ namespace lvalonmeme.Config
 
 			   Unfinished: false,
 			   Illustrator: null,
-			   SubIllustrator: new List<string>() { }
+			   SubIllustrator: []
 			);
 			// config.RelativeEffects = new List<string>() { nameof(sememe) };
 			// config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
@@ -148,8 +148,8 @@ namespace lvalonmeme.Config
 				HasCounter: false,
 				InitialCounter: null,
 				Keywords: Keyword.None,
-				RelativeEffects: new List<string>() { },
-				RelativeCards: new List<string>() { }
+				RelativeEffects: [],
+				RelativeCards: []
 			);
 		}
 
@@ -174,7 +174,7 @@ namespace lvalonmeme.Config
 				LimitStackType: StackType.Keep,
 				ShowPlusByLimit: false,
 				Keywords: Keyword.None,
-				RelativeEffects: new List<string>() { },
+				RelativeEffects: [],
 				VFX: "Default",
 				VFXloop: "Default",
 				SFX: "Default"
@@ -194,8 +194,8 @@ namespace lvalonmeme.Config
 				Value1: 0,
 				Value2: 0,
 				Keywords: Keyword.Accuracy,
-				RelativeEffects: new List<string>() { },
-				RelativeCards: new List<string>() { }
+				RelativeEffects: [],
+				RelativeCards: []
 			);
 		}
 
@@ -205,14 +205,14 @@ namespace lvalonmeme.Config
 				Index: 0,
 				Id: "",
 				Order: 10,
-				Group: new List<string>() { },
+				Group: [],
 				Value1: null,
 				Value2: null,
 				Value3: null,
 				Mana: null,
 				Keywords: Keyword.None,
-				RelativeEffects: new List<string>() { },
-				RelativeCards: new List<string>() { }
+				RelativeEffects: [],
+				RelativeCards: []
 			);
 		}
 
@@ -222,7 +222,7 @@ namespace lvalonmeme.Config
 				Id: "",
 				RealName: false,
 				OnlyLore: false,
-				BaseManaColor: new List<LBoL.Base.ManaColor>() { ManaColor.Colorless },
+				BaseManaColor: [ManaColor.Colorless],
 				Order: 10,
 				ModleName: "",
 				NarrativeColor: "#ffff",
@@ -259,10 +259,10 @@ namespace lvalonmeme.Config
 				Count2Lunatic: 2,
 				PowerLoot: new MinMax(100, 100),
 				BluePointLoot: new MinMax(100, 100),
-				Gun1: new List<string> { GunNameID.GetGunFromId(800) },
-				Gun2: new List<string> { GunNameID.GetGunFromId(800) },
-				Gun3: new List<string> { GunNameID.GetGunFromId(800) },
-				Gun4: new List<string> { GunNameID.GetGunFromId(800) }
+				Gun1: [GunNameID.GetGunFromId(800)],
+				Gun2: [GunNameID.GetGunFromId(800)],
+				Gun3: [GunNameID.GetGunFromId(800)],
+				Gun4: [GunNameID.GetGunFromId(800)]
 			);
 		}
 
@@ -273,10 +273,10 @@ namespace lvalonmeme.Config
 				Hidden: false,
 				Environment: null,
 				IsSub: false,
-				Subs: new List<string>() { },
+				Subs: [],
 				Name: "",
 				FormationName: VanillaFormations.Single,
-				Enemies: new List<string>() { },
+				Enemies: [],
 				EnemyType: EnemyType.Boss,
 				DebutTime: 1f,
 				RollBossExhibit: true,
@@ -291,9 +291,7 @@ namespace lvalonmeme.Config
 			return new PackConfig(
 				Id: "",
 
-				CardList: new List<string>()
-				{
-				}
+				CardList: []
 			);
 		}
 	}

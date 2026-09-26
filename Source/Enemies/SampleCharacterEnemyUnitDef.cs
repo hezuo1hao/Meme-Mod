@@ -20,7 +20,7 @@ namespace lvalonmeme.Enemies
             config.IsPreludeOpponent = false;
 
             //Color(s) of the exhibits the boss can drop (right-most exhibit).
-            config.BaseManaColor = new List<ManaColor>() { ManaColor.White };
+            config.BaseManaColor = [ManaColor.White];
 
             config.Type = EnemyType.Boss;
 
@@ -60,10 +60,10 @@ namespace lvalonmeme.Enemies
             config.PowerLoot = new MinMax(100, 100);
             config.BluePointLoot = new MinMax(100, 100);
 
-            config.Gun1 = new List<string> { GunNameID.GetGunFromId(800) };
-            config.Gun2 = new List<string> { GunNameID.GetGunFromId(800) };
-            config.Gun3 = new List<string> { GunNameID.GetGunFromId(800) };
-            config.Gun4 = new List<string> { GunNameID.GetGunFromId(800) };
+            config.Gun1 = [GunNameID.GetGunFromId(800)];
+            config.Gun2 = [GunNameID.GetGunFromId(800)];
+            config.Gun3 = [GunNameID.GetGunFromId(800)];
+            config.Gun4 = [GunNameID.GetGunFromId(800)];
 
             return config;
         }

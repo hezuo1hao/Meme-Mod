@@ -32,7 +32,7 @@ namespace lvalonmeme.Cards
 
 			config.IsXCost = true;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.White };
+			config.Colors = [ManaColor.Blue, ManaColor.White];
 			config.Cost = new ManaGroup { Blue = 1, White = 1 };
 			config.Rarity = Rarity.Rare;
 
@@ -45,10 +45,10 @@ namespace lvalonmeme.Cards
 			config.RelativeKeyword = Keyword.TempMorph;
 			config.UpgradedRelativeKeyword = Keyword.TempMorph;
 
-			config.RelativeCards = new List<string>() { nameof(PerfectServant) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(PerfectServant) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(sememe), nameof(ExtraTurn) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe), nameof(ExtraTurn) };
+			config.RelativeCards = [nameof(PerfectServant)];
+			config.UpgradedRelativeCards = [nameof(PerfectServant) + "+"];
+			config.RelativeEffects = [nameof(sememe), nameof(ExtraTurn)];
+			config.UpgradedRelativeEffects = [nameof(sememe), nameof(ExtraTurn)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

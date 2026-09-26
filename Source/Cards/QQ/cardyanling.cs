@@ -22,7 +22,7 @@ namespace lvalonmeme.Cards
 			config.Owner = null;
 			config.GunName = "FrozenOrb";
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Green };
+			config.Colors = [ManaColor.Blue, ManaColor.Green];
 			config.Cost = new ManaGroup { Any = 1, Blue = 1, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
@@ -33,8 +33,8 @@ namespace lvalonmeme.Cards
 
 			config.Keywords = Keyword.Exile;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

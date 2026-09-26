@@ -28,7 +28,7 @@ namespace lvalonmeme.Cards
 			config.Value2 = 5;
 			config.UpgradedValue2 = 10;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Black };
+			config.Colors = [ManaColor.Black];
 			config.Cost = new ManaGroup { Any = 1, Black = 1 };
 			config.Rarity = Rarity.Common;
 
@@ -36,10 +36,10 @@ namespace lvalonmeme.Cards
 
 			config.Keywords = Keyword.Exile;
 			config.UpgradedKeywords = Keyword.Exile | Keyword.Retain;
-			config.RelativeCards = new List<string>() { nameof(MystiaSing) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(MystiaSing) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(MystiaSing)];
+			config.UpgradedRelativeCards = [nameof(MystiaSing) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

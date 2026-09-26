@@ -29,14 +29,14 @@ namespace lvalonmeme.Cards
 			config.Value1 = 3;
 			config.UpgradedValue1 = 5;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Black, ManaColor.Red };
+			config.Colors = [ManaColor.Black, ManaColor.Red];
 			config.Cost = new ManaGroup { Black = 1, Red = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

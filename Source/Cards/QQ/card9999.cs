@@ -27,16 +27,16 @@ namespace lvalonmeme.Cards
 			config.Value1 = 3;
 			config.Value2 = 6;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Black };
+			config.Colors = [ManaColor.Black];
 			config.Cost = new ManaGroup { Any = 2, Black = 3 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(MarisaSteal), nameof(PotionDefense) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(MarisaSteal), nameof(PotionDefense) };
-			config.RelativeEffects = new List<string>() { nameof(Poison), nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(Poison), nameof(sememe) };
+			config.RelativeCards = [nameof(MarisaSteal), nameof(PotionDefense)];
+			config.UpgradedRelativeCards = [nameof(MarisaSteal), nameof(PotionDefense)];
+			config.RelativeEffects = [nameof(Poison), nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(Poison), nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -58,11 +58,7 @@ namespace lvalonmeme.Cards
 			}
 			else
 			{
-                List<Card> cards = new List<Card>();
-                foreach (Card card in Battle.EnumerateAllCardsButExile().Where(c => c.IsBasic))
-                {
-                    cards.Add(card);
-                }
+                List<Card> cards = [.. Battle.EnumerateAllCardsButExile().Where(c => c.IsBasic)];
                 yield return new ExileManyCardAction(cards);
                 yield return new AddCardsToDrawZoneAction(Library.CreateCards<MarisaSteal>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);
                 yield return new AddCardsToDrawZoneAction(Library.CreateCards<PotionDefense>(1, false), DrawZoneTarget.Random, AddCardsType.Normal);

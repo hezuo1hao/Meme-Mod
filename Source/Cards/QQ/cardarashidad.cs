@@ -44,10 +44,10 @@ namespace lvalonmeme.Cards
 			config.RelativeKeyword = Keyword.TempMorph;
 			config.UpgradedRelativeKeyword = Keyword.TempMorph;
 
-			config.RelativeCards = new List<string>() { nameof(MeihongPower), nameof(HuoliQuankai), nameof(JinziDoppelganger) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(cardarashi), nameof(HuoliQuankai), nameof(ReimuSilence), nameof(JinziDoppelganger) };
-			config.RelativeEffects = new List<string>() { nameof(sememe), nameof(Grace), nameof(TempFirepower), nameof(TempSpirit) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe), nameof(Grace), nameof(TempFirepower), nameof(TempSpirit) };
+			config.RelativeCards = [nameof(MeihongPower), nameof(HuoliQuankai), nameof(JinziDoppelganger)];
+			config.UpgradedRelativeCards = [nameof(cardarashi), nameof(HuoliQuankai), nameof(ReimuSilence), nameof(JinziDoppelganger)];
+			config.RelativeEffects = [nameof(sememe), nameof(Grace), nameof(TempFirepower), nameof(TempSpirit)];
+			config.UpgradedRelativeEffects = [nameof(sememe), nameof(Grace), nameof(TempFirepower), nameof(TempSpirit)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -64,17 +64,11 @@ namespace lvalonmeme.Cards
 		public ManaGroup Mana0 => new ManaGroup { Any = 0 };
 		public override Interaction Precondition()
 		{
-			List<Card> options = new List<Card>();
-			if (!IsUpgraded)
-			{
-				options.Add(Library.CreateCard<MeihongPower>());
-			}
-			else
-			{
-				options.Add(Library.CreateCard<cardarashi>());
-			}
-
-			options.Add(Library.CreateCard<HuoliQuankai>());
+			List<Card> options =
+            [
+                !IsUpgraded ? Library.CreateCard<MeihongPower>() : Library.CreateCard<cardarashi>(),
+                Library.CreateCard<HuoliQuankai>(),
+            ];
 			if (IsUpgraded)
 			{
 				options.Add(Library.CreateCard<ReimuSilence>());

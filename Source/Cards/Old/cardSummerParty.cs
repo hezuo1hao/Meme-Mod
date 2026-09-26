@@ -31,7 +31,7 @@ namespace lvalonmeme.Cards
 			config.Mana = new ManaGroup() { Green = 2 };
 			config.UpgradedMana = new ManaGroup() { Green = 1 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.Green };
+			config.Colors = [ManaColor.Blue, ManaColor.Green];
 			config.Cost = new ManaGroup { Blue = 1, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
@@ -40,10 +40,10 @@ namespace lvalonmeme.Cards
 			config.RelativeKeyword = Keyword.Synergy | Keyword.FriendCard;
 			config.UpgradedRelativeKeyword = Keyword.Synergy | Keyword.FriendCard;
 
-			config.RelativeCards = new List<string>() { nameof(SummerParty) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(SummerParty) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold), nameof(FrostArmor) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold), nameof(FrostArmor) };
+			config.RelativeCards = [nameof(SummerParty)];
+			config.UpgradedRelativeCards = [nameof(SummerParty) + "+"];
+			config.RelativeEffects = [nameof(seold), nameof(FrostArmor)];
+			config.UpgradedRelativeEffects = [nameof(seold), nameof(FrostArmor)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

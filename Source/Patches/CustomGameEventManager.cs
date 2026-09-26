@@ -108,10 +108,10 @@ namespace lvalonmeme.Patches
 				default:
 					break;
 			}
-			return new List<string>();
+			return [];
 		}
-		static List<string> memecardids = new List<string>
-			{
+		static List<string> memecardids =
+            [
                 //day1
                 nameof(cardlvalon),
 				nameof(cardkotk),
@@ -143,9 +143,9 @@ namespace lvalonmeme.Patches
 				nameof(cardperfectfumo),
 
 				nameof(cardendofturn),
-			};
-		static List<string> oldcardids = new List<string>
-			{
+			];
+		static List<string> oldcardids =
+            [
                 //day4
                 nameof(cardold),
 				nameof(cardDoremyDuplicate),
@@ -175,9 +175,9 @@ namespace lvalonmeme.Patches
 				nameof(cardChangzhizhen),
 				nameof(cardHuanxiangBlock),
 				nameof(cardShenziUpgradeAll),
-			};
-		static List<string> oldcardbanids = new List<string>
-			{
+			];
+		static List<string> oldcardbanids =
+            [
                 //day4
                 nameof(DoremyDuplicate),
 				nameof(YonglinCard),
@@ -206,7 +206,7 @@ namespace lvalonmeme.Patches
 				nameof(Changzhizhen),
 				nameof(HuanxiangBlock),
 				nameof(ShenziUpgradeAll),
-			};
+			];
 		[HarmonyPatch(typeof(CardWeightTable), nameof(CardWeightTable.WeightFor), typeof(CardConfig), typeof(string), typeof(ISet<string>)), HarmonyPostfix]
 		public static void OverrideWeightFor(CardWeightTable __instance, CardConfig cardConfig, string playerId, ISet<string> exhibitOwnerIds, ref float __result)
 		{

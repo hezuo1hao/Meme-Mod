@@ -25,17 +25,17 @@ namespace lvalonmeme.Cards
 
 			config.Value1 = 1; // draw
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 0 };
 			config.Rarity = Rarity.Common;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
-			config.RelativeCards = new List<string>() { nameof(cardicewingplus) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(cardicewingplus) };
+			config.RelativeCards = [nameof(cardicewingplus)];
+			config.UpgradedRelativeCards = [nameof(cardicewingplus)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

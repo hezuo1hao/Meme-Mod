@@ -23,7 +23,7 @@ namespace lvalonmeme.Cards
 			config.Owner = null;
 
 			config.Value1 = 10;
-			config.Colors = new List<ManaColor>() { ManaColor.Colorless };
+			config.Colors = [ManaColor.Colorless];
 			config.Cost = new ManaGroup { Any = 3 };
 			config.UpgradedCost = new ManaGroup { Any = 2 };
 			config.Rarity = Rarity.Rare;
@@ -33,8 +33,8 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Ethereal;
 			config.UpgradedKeywords = Keyword.Ethereal;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

@@ -50,7 +50,7 @@ namespace lvalonmeme
 
             UniqueRandomPool<Type> innitialPool = gr.CreateValidCardsPool(weightTable, manaLimit, colorLimit, applyFactors, battleRolling, null);
 
-            UniqueRandomPool<Card> filteredPool = new UniqueRandomPool<Card>();
+            UniqueRandomPool<Card> filteredPool = [];
 
             foreach (RandomPoolEntry<Type> e in innitialPool)
             {
@@ -72,7 +72,7 @@ namespace lvalonmeme
 
             UniqueRandomPool<Type> innitialPool = gr.CreateValidCardsPool(weightTable, manaLimit, colorLimit, applyFactors, battleRolling, null);
 
-            UniqueRandomPool<Card> filteredPool = new UniqueRandomPool<Card>();
+            UniqueRandomPool<Card> filteredPool = [];
 
             foreach (RandomPoolEntry<Type> e in innitialPool)
             {
@@ -94,7 +94,7 @@ namespace lvalonmeme
 
             UniqueRandomPool<Type> innitialPool = CreateAllCardsPool(weightTable, null);
 
-            RepeatableRandomPool<Card> filteredPool = new RepeatableRandomPool<Card>();
+            RepeatableRandomPool<Card> filteredPool = [];
 
             foreach (RandomPoolEntry<Type> e in innitialPool)
             {
@@ -116,7 +116,7 @@ namespace lvalonmeme
 
             UniqueRandomPool<Type> innitialPool = CreateAllCardsPool(weightTable, null);
 
-            UniqueRandomPool<Card> filteredPool = new UniqueRandomPool<Card>();
+            UniqueRandomPool<Card> filteredPool = [];
 
             foreach (RandomPoolEntry<Type> e in innitialPool)
             {
@@ -135,7 +135,7 @@ namespace lvalonmeme
         {
             var gr = GameMaster.Instance.CurrentGameRun;
             var charExSet = new HashSet<string>(gr.Player.Exhibits.Where(e => e.OwnerId != null).Select(e => e.OwnerId));
-            UniqueRandomPool<Type> uniqueRandomPool = new UniqueRandomPool<Type>();
+            UniqueRandomPool<Type> uniqueRandomPool = [];
             foreach (var item4 in EnumerateALLCardTypes())
             {
                 Type item = item4.Item1;
@@ -192,7 +192,7 @@ namespace lvalonmeme
         }
         static public UniqueRandomPool<Type> CreateAllExhibitsPool(ExhibitWeightTable weightTable, [MaybeNull] Predicate<ExhibitConfig> filter = null)
         {
-            UniqueRandomPool<Type> uniqueRandomPool = new UniqueRandomPool<Type>();
+            UniqueRandomPool<Type> uniqueRandomPool = [];
             foreach (var item4 in EnumerateALLExhibitTypes())
             {
                 ExhibitConfig item2 = item4.Item2;
@@ -207,7 +207,7 @@ namespace lvalonmeme
 
         static public Card createcardwithidBACKUP(String id)
         {
-            UniqueRandomPool<Type> uniqueRandomPool = new UniqueRandomPool<Type>();
+            UniqueRandomPool<Type> uniqueRandomPool = [];
             foreach (var item4 in EnumerateALLCardTypes())
             {
                 Type item = item4.Item1;
@@ -217,7 +217,7 @@ namespace lvalonmeme
                     uniqueRandomPool.Add(item, 1);
                 }
             }
-            UniqueRandomPool<Card> filteredPool = new UniqueRandomPool<Card>();
+            UniqueRandomPool<Card> filteredPool = [];
             foreach (RandomPoolEntry<Type> e in uniqueRandomPool)
             {
                 Card card = Library.CreateCard(e.Elem);

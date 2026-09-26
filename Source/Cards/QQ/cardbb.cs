@@ -31,17 +31,17 @@ namespace lvalonmeme.Cards
 			config.Mana = new ManaGroup { Philosophy = 3 };
 			config.UpgradedMana = new ManaGroup { Philosophy = 6 };
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { Any = 3, White = 2 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Skill;
 
-			config.RelativeCards = new List<string>() { nameof(PatchouliLibrary), nameof(YukariFriend), nameof(OutInGap) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(PatchouliLibrary), nameof(YukariFriend), nameof(OutInGap), nameof(ZhenmiaowanAbility), nameof(DanceAroundLake), nameof(MoonPurify), nameof(Jiangshen) };
+			config.RelativeCards = [nameof(PatchouliLibrary), nameof(YukariFriend), nameof(OutInGap)];
+			config.UpgradedRelativeCards = [nameof(PatchouliLibrary), nameof(YukariFriend), nameof(OutInGap), nameof(ZhenmiaowanAbility), nameof(DanceAroundLake), nameof(MoonPurify), nameof(Jiangshen)];
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -83,11 +83,11 @@ namespace lvalonmeme.Cards
 
 			yield return new GainManaAction(Mana);
 
-			List<Card> cards1 = new List<Card>{
+			List<Card> cards1 = [
 				Library.CreateCard<PatchouliLibrary>(),
 				Library.CreateCard<YukariFriend>(),
 				Library.CreateCard<OutInGap>(),
-			};
+			];
 			SelectCardInteraction interaction = new SelectCardInteraction(0, cards1.Count, cards1, SelectedCardHandling.DoNothing)
 			{
 				Source = this
@@ -101,12 +101,12 @@ namespace lvalonmeme.Cards
 
 			if (IsUpgraded)
 			{
-				List<Card> cards2 = new List<Card>{
+				List<Card> cards2 = [
 				Library.CreateCard<ZhenmiaowanAbility>(),
 				Library.CreateCard<DanceAroundLake>(),
 				Library.CreateCard<MoonPurify>(),
 				Library.CreateCard<Jiangshen>()
-				};
+				];
 				SelectCardInteraction interaction2 = new SelectCardInteraction(0, cards2.Count, cards2, SelectedCardHandling.DoNothing)
 				{
 					Source = this

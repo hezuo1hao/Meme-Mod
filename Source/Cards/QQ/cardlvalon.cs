@@ -35,7 +35,7 @@ namespace lvalonmeme.Cards
 			config.Owner = null;
 			config.FindInBattle = false;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue };
+			config.Colors = [ManaColor.Blue];
 			config.Rarity = Rarity.Rare;
 			config.Mana = new ManaGroup { Philosophy = 1 };
 
@@ -43,8 +43,8 @@ namespace lvalonmeme.Cards
 			config.Keywords = Keyword.Forbidden | Keyword.Ethereal;
 			config.UpgradedKeywords = Keyword.Forbidden | Keyword.Replenish | Keyword.Plentiful;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

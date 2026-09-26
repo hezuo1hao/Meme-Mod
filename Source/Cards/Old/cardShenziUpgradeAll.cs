@@ -23,17 +23,17 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = null;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White };
+			config.Colors = [ManaColor.White];
 			config.Cost = new ManaGroup { Any = 3, White = 1 };
 			config.UpgradedCost = new ManaGroup { Any = 1, White = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(ShenziUpgradeAll) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(ShenziUpgradeAll) + "+" };
-			config.RelativeEffects = new List<string>() { nameof(seold) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(seold) };
+			config.RelativeCards = [nameof(ShenziUpgradeAll)];
+			config.UpgradedRelativeCards = [nameof(ShenziUpgradeAll) + "+"];
+			config.RelativeEffects = [nameof(seold)];
+			config.UpgradedRelativeEffects = [nameof(seold)];
 
 			config.Pack = nameof(packoldDef)[..^3];
 

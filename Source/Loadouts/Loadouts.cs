@@ -12,19 +12,19 @@ namespace lvalonmeme
 
 		// public static string ExhibitA = nameof(SampleCharacterExhibitA);
 		// public static string ExhibitB = nameof(SampleCharacterExhibitB);
-		public static List<string> DeckA = new List<string>{
+		public static List<string> DeckA = [
 			nameof(Shoot),
 			nameof(Shoot),
 			nameof(Boundary),
 			nameof(Boundary),
-		};
+		];
 
-		public static List<string> DeckB = new List<string>{
+		public static List<string> DeckB = [
 			nameof(Shoot),
 			nameof(Shoot),
 			nameof(Boundary),
 			nameof(Boundary),
-		};
+		];
 
 		public static PlayerUnitConfig playerUnitConfig = new PlayerUnitConfig(
 			Id: BepinexPlugin.modUniqueID,

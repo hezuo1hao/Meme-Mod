@@ -24,7 +24,7 @@ namespace lvalonmeme.Cards
 			config.Owner = null;
 			config.FindInBattle = false;
 
-			config.Colors = new List<ManaColor>() { ManaColor.White, ManaColor.Blue };
+			config.Colors = [ManaColor.White, ManaColor.Blue];
 			config.Cost = new ManaGroup { Any = 1, Hybrid = 1, HybridColor = 0 };
 			config.Rarity = Rarity.Rare;
 
@@ -33,8 +33,8 @@ namespace lvalonmeme.Cards
 			config.Illustrator = "問他";
 
             config.Keywords = config.UpgradedKeywords = Keyword.Disposable;
-            config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+            config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

@@ -30,16 +30,16 @@ namespace lvalonmeme.Cards
 			config.Value1 = 30;
 			config.Value2 = 200;
 
-			config.Colors = new List<ManaColor>() { ManaColor.Blue, ManaColor.White, ManaColor.Green };
+			config.Colors = [ManaColor.Blue, ManaColor.White, ManaColor.Green];
 			config.Cost = new ManaGroup { Blue = 1, White = 1, Green = 1 };
 			config.Rarity = Rarity.Rare;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = config.UpgradedRelativeCards = new List<string>() { nameof(CallFriends), nameof(OutInGap), nameof(LanCard), nameof(PatchouliLibrary), nameof(cardshouchang) };
+			config.RelativeCards = config.UpgradedRelativeCards = [nameof(CallFriends), nameof(OutInGap), nameof(LanCard), nameof(PatchouliLibrary), nameof(cardshouchang)];
 			config.UpgradedKeywords = Keyword.Power;
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 

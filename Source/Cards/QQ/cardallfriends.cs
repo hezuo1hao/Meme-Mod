@@ -23,19 +23,19 @@ namespace lvalonmeme.Cards
 			config.HideMesuem = false;
 			config.Owner = "Cirno";
 
-			config.Colors = new List<ManaColor>() { ManaColor.Green, ManaColor.Blue };
+			config.Colors = [ManaColor.Green, ManaColor.Blue];
 			config.Cost = new ManaGroup { Green = 3, Blue = 2 };
 			config.Rarity = Rarity.Rare;
 			config.Value1 = 1;
 
 			config.Type = CardType.Ability;
 
-			config.RelativeCards = new List<string>() { nameof(GatherFairy) };
-			config.UpgradedRelativeCards = new List<string>() { nameof(GatherFairy), nameof(DayaojingFriend), nameof(MaidFriend), nameof(LeidiFriend), nameof(LarvaFriend), nameof(LilyFriend), nameof(LunaFriend), nameof(StarFriend), nameof(SunnyFriend), nameof(ClownpieceFriend) };
+			config.RelativeCards = [nameof(GatherFairy)];
+			config.UpgradedRelativeCards = [nameof(GatherFairy), nameof(DayaojingFriend), nameof(MaidFriend), nameof(LeidiFriend), nameof(LarvaFriend), nameof(LilyFriend), nameof(LunaFriend), nameof(StarFriend), nameof(SunnyFriend), nameof(ClownpieceFriend)];
 			config.UpgradedRelativeKeyword = Keyword.Replenish;
 
-			config.RelativeEffects = new List<string>() { nameof(sememe) };
-			config.UpgradedRelativeEffects = new List<string>() { nameof(sememe) };
+			config.RelativeEffects = [nameof(sememe)];
+			config.UpgradedRelativeEffects = [nameof(sememe)];
 
 			config.Pack = nameof(packmemeDef)[..^3];
 
@@ -55,7 +55,7 @@ namespace lvalonmeme.Cards
 			yield return new ApplyStatusEffectAction<seallfriends>(Battle.Player, new int?(Value1), null, null, null, 0f, true);
 			if (IsUpgraded)
 			{
-				List<Card> cards = new List<Card>{
+				List<Card> cards = [
 				Library.CreateCard<DayaojingFriend>(),
 				Library.CreateCard<MaidFriend>(),
 				Library.CreateCard<LeidiFriend>(),
@@ -65,8 +65,8 @@ namespace lvalonmeme.Cards
 				Library.CreateCard<StarFriend>(),
 				Library.CreateCard<SunnyFriend>(),
 				Library.CreateCard<ClownpieceFriend>()
-			};
-				List<Card> cards2 = new List<Card>();
+			];
+				List<Card> cards2 = [];
 				foreach (Card card in cards)
 				{
 					card.Summon();
