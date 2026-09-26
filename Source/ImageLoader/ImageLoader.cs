@@ -10,7 +10,7 @@ namespace lvalonmeme.ImageLoader
 		public static string file_extension = ".png";
 		public static PlayerImages LoadPlayerImages(string name)
 		{
-			PlayerImages sprites = new PlayerImages();
+			PlayerImages sprites = new();
 			sprites.AutoLoad(name, (s) => ResourceLoader.LoadSprite(s, BepinexPlugin.directorySource, ppu: 100, 1, FilterMode.Bilinear, generateMipMaps: true), (s) => ResourceLoader.LoadSpriteAsync(s, BepinexPlugin.directorySource));
 			return sprites;
 		}

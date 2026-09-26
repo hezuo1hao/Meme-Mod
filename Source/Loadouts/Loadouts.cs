@@ -26,7 +26,7 @@ namespace lvalonmeme
 			nameof(Boundary),
 		];
 
-		public static PlayerUnitConfig playerUnitConfig = new PlayerUnitConfig(
+		public static PlayerUnitConfig playerUnitConfig = new(
 			Id: BepinexPlugin.modUniqueID,
 			HasHomeName: true,
 			ShowOrder: 8,

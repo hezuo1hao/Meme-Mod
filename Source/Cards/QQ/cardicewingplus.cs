@@ -62,7 +62,7 @@ namespace lvalonmeme.Cards
 	{
 		public int growcount => Battle != null ? Battle.BattleCardUsageHistory.Count(x => x.Id == nameof(cardicewingplusDef)[..^3]) : 0;
 		public int Value6 => 6;
-		public ManaGroup Mana3 => new ManaGroup() { Blue = 1 };
+		public ManaGroup Mana3 => new() { Blue = 1 };
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
 			if (growcount == Value6 - 1)
@@ -74,7 +74,7 @@ namespace lvalonmeme.Cards
 					Library.CreateCard<cardiwoption3>()
 				];
 
-				SelectCardInteraction interaction = new SelectCardInteraction(1, 1, list)
+				SelectCardInteraction interaction = new(1, 1, list)
 				{
 					Source = this
 				};
@@ -109,7 +109,7 @@ namespace lvalonmeme.Cards
 					yield break;
 				}
 
-				MiniSelectCardInteraction interaction = new MiniSelectCardInteraction(cards)
+				MiniSelectCardInteraction interaction = new(cards)
 				{
 					Source = this
 				};

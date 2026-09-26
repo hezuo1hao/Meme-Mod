@@ -61,7 +61,7 @@ namespace lvalonmeme.Cards
 	[EntityLogic(typeof(cardarashidadDef))]
 	public sealed class cardarashidad : lvalonmemecard.memecard
 	{
-		public ManaGroup Mana0 => new ManaGroup { Any = 0 };
+		public ManaGroup Mana0 => new() { Any = 0 };
 		public override Interaction Precondition()
 		{
 			List<Card> options =

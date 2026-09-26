@@ -413,7 +413,7 @@ namespace lvalonmeme.JadeBoxes
 							cards = toolbox.CreateAllCardsPoolList(new CardWeightTable(RarityWeightTable.AllOnes, OwnerWeightTable.AllOnes, CardTypeWeightTable.AllOnes, true), config => config.DebugLevel < 1);
 						}
 						GameRun.UpgradeNewDeckCardOnFlags(cards);
-						SelectCardInteraction interaction = new SelectCardInteraction(1, 1, cards, SelectedCardHandling.DoNothing)
+						SelectCardInteraction interaction = new(1, 1, cards, SelectedCardHandling.DoNothing)
 						{
 							Source = this
 						};

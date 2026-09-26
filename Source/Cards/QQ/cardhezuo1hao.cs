@@ -83,7 +83,7 @@ namespace lvalonmeme.Cards
                 if (!IsUpgraded)
                     return base.Name;
 
-                StringBuilder name = new StringBuilder(base.Name);
+                StringBuilder name = new(base.Name);
                 switch (modifier)
                 {
                     case (int)modifiers.Warding:

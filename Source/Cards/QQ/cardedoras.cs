@@ -48,7 +48,7 @@ namespace lvalonmeme.Cards
 	[EntityLogic(typeof(cardedorasDef))]
 	public sealed class cardedoras : lvalonmemecard.memecard
 	{
-		DateTime start = new DateTime(2024, 12, 28);
+		DateTime start = new(2024, 12, 28);
 		static int GetRoundedDaysBetweenNowAnd(DateTime specifiedDate)
 		{
 			TimeSpan difference = DateTime.Now - specifiedDate;

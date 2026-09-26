@@ -8,7 +8,7 @@ namespace lvalonmeme
 		public const string GUID = "llbol.meme.meme";
 		public const string Name = "Everyone Is Here";
 		public const string version = "0.0.32";
-		public static readonly Harmony harmony = new Harmony(GUID);
+		public static readonly Harmony harmony = new(GUID);
 
 	}
 }

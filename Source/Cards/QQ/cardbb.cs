@@ -88,7 +88,7 @@ namespace lvalonmeme.Cards
 				Library.CreateCard<YukariFriend>(),
 				Library.CreateCard<OutInGap>(),
 			];
-			SelectCardInteraction interaction = new SelectCardInteraction(0, cards1.Count, cards1, SelectedCardHandling.DoNothing)
+			SelectCardInteraction interaction = new(0, cards1.Count, cards1, SelectedCardHandling.DoNothing)
 			{
 				Source = this
 			};
@@ -107,7 +107,7 @@ namespace lvalonmeme.Cards
 				Library.CreateCard<MoonPurify>(),
 				Library.CreateCard<Jiangshen>()
 				];
-				SelectCardInteraction interaction2 = new SelectCardInteraction(0, cards2.Count, cards2, SelectedCardHandling.DoNothing)
+				SelectCardInteraction interaction2 = new(0, cards2.Count, cards2, SelectedCardHandling.DoNothing)
 				{
 					Source = this
 				};

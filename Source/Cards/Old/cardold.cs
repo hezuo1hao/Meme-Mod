@@ -57,7 +57,7 @@ namespace lvalonmeme.Cards
 		protected override IEnumerable<BattleAction> Actions(UnitSelector selector, ManaGroup consumingMana, Interaction precondition)
 		{
 			Card[] cards = Battle.RollCardsWithoutManaLimit(new CardWeightTable(RarityWeightTable.BattleCard, OwnerWeightTable.AllOnes, CardTypeWeightTable.CanBeLoot, false), Value1, (CardConfig config) => config.Id != Id && CustomGameEventManager.GetList("old").Contains(config.Id));
-			MiniSelectCardInteraction interaction = new MiniSelectCardInteraction(cards, false, false, false)
+			MiniSelectCardInteraction interaction = new(cards, false, false, false)
 			{
 				Source = this
 			};

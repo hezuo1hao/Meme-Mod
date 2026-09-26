@@ -55,7 +55,7 @@ namespace lvalonmeme.Cards
 			List<Card> list = Battle.RollCards(new CardWeightTable(RarityWeightTable.BattleCard, OwnerWeightTable.Valid, CardTypeWeightTable.CanBeLoot, false), Value1, (CardConfig config) => config.Cost.Amount == Value2 && config.Type == CardType.Ability).ToList();
 			if (list.Count > 0)
 			{
-				MiniSelectCardInteraction interaction = new MiniSelectCardInteraction(list, false, false, false)
+				MiniSelectCardInteraction interaction = new(list, false, false, false)
 				{
 					Source = this
 				};
